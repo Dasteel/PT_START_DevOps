@@ -1,0 +1,25 @@
+all:
+  vars:
+    DB_USER: "postgres"
+    DB_PASSWORD: "12345"
+    DB_REPL_USER: "repl_user"
+    DB_REPL_PASSWORD: "12345"
+    DB_PORT: "5432"
+    DB_DATABASE: "db_tel_bot"
+    DB_REPL_PORT: "5433"
+  hosts:
+    tg-bot:
+      ansible_host: 192.168.43.243
+      ansible_user: ubun
+      ansible_password: ubun
+      ansible_become_password: ubun
+    db:
+      ansible_host: 192.168.43.243
+      ansible_user: ubun
+      ansible_password: ubun
+      ansible_become_password: ubun
+    db_repl:
+      ansible_host: 192.168.43.54
+      ansible_user: ubun
+      ansible_password: ubun
+      ansible_become_password: ubun
